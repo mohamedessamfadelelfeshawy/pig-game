@@ -45,7 +45,7 @@ holdDice.addEventListener("click", () => {
     document.getElementById(`score--${test}`).textContent = scors[test];
     document.getElementById(`current--${test}`).textContent = 0;
     currentNumber = 0;
-    if (scors[test] >= 100) {
+    if (scors[test] >= 30) {
       playing = false;
       document
         .querySelector(`.player--${test}`)
@@ -61,6 +61,8 @@ holdDice.addEventListener("click", () => {
 });
 
 newGame.addEventListener("click", () => {
+  currentNumber = 0;
+  scors = [0, 0];
   scoreZero.textContent = 0;
   scoreOne.textContent = 0;
   currentZero.textContent = 0;
